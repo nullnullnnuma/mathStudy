@@ -1,0 +1,57 @@
+
+/* ------------------------------ */
+/* sample01 */
+/* ------------------------------ */
+.header01 {
+  padding: 16px 24px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*
+  ↓ 固定にしたい場合は下記を入れる
+      position: sticky;
+      top: 0;
+      left: 0;
+  */
+}
+
+.header01-logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.header01-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header01-item--contact {
+  background-color: #2486d1;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+.timer{
+    text-align: center;
+    font-size: 2em;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

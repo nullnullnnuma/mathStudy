@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>二進数勉強スクリプト</title>
+<link href="mathStudy CSS.css" rel="stylesheet">
+</head>
+<body>
+        <header class="header01">
+            <h1 class="header01-logo">二進数を勉強しよう</h1>
+
+            <nav class="header01-nav">
+                <ul class="header01-list">
+                    <li class="header01-item"><a href="">実績</a></li>
+                    <li class="header01-item"><a href="">あばうと</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+<button id="start">スタート</button>
+<button id="stop">やめる</button>
+
+<select id="timeSelect">
+    <option value="30">30秒</option>
+    <option value="60">60秒</option>
+</select>
+
+<select id="styleSelect">
+    <option>二進数→十進数モード</option>
+    <option>十進数→二進数モード</option>
+    <option>まぜこぜモード</option>
+</select>
+<div class="timer" id="countdown">00:00:00</div>
+
+
+<div id="correct">0</div>
+<div id="questionArea"></div>
+
+
+<script src="mathStudyMazekoze JS.js"id="useScript"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () =>{
+    const mode = document.getElementById('styleSelect');
+    select.addEventListener('change', (e) => {
+    let modesentaku = mode.value
+    if(modesentaku === 'まぜこぜモード'){
+        mode.setAttribute('src', 'mathStudyMazekoze JS.js')
+    }else{
+        if(modesentaku === '二進数→十進数モード'){
+            mode.setAttribute('src', 'mathStudyTwo JS.js');
+        }else{
+            mode.setAttribute('src', 'mathStudyTen JS.js');
+        }
+    }
+    });
+});
+</script>
+</body>
+</html>
