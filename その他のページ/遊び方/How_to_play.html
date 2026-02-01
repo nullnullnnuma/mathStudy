@@ -20,6 +20,30 @@
                 </ul>
             </nav>
         </header>
+<div id="loading-weapper">
+<div class="loading-15">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="loading-5">
+    <p>
+        <span>L</span>
+        <span>o</span>
+        <span>a</span>
+        <span>d</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+    </p>
+</div>
+</div>
 
 
 <div id="main-content">
@@ -42,6 +66,20 @@
 </div>
 </div>
 
+<script>
+//ローディング関連
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('loading-weapper')
+
+        //フェードアウトクラス付与
+        loader.classList.add('fade-out');
+        //アニメーションが終わったらディスプレイのーん
+        loader.addEventListener('animationend', () => {
+            loader.style.display = 'none';
+        })
+    })
+
+</script>
 
 </body>
 </html>
