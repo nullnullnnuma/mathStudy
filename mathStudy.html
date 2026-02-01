@@ -2,7 +2,10 @@
 <html>
 <head>
 <title>二進数勉強スクリプト</title>
-<link href="mathStudy CSS.css" rel="stylesheet">
+<link href="mathStudy_CSS.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
 </head>
 <body>
         <header class="header01">
@@ -11,49 +14,162 @@
             <nav class="header01-nav">
                 <ul class="header01-list">
                     <li class="header01-item"><a href="">実績</a></li>
-                    <li class="header01-item"><a href="">あばうと</a></li>
+                    <li class="header01-item"><a href="その他のページ/遊び方/How_to_play.html">遊び方</a></li>
+                    <li class="header01-item"><a href="その他のページ/あばうと/about.html">あばうと</a></li>
                 </ul>
             </nav>
         </header>
 
+<div id="loading-weapper">
+<div class="loading-15">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="loading-5">
+    <p>
+        <span>L</span>
+        <span>o</span>
+        <span>a</span>
+        <span>d</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+    </p>
+</div>
+</div>
 
-<button id="start">スタート</button>
-<button id="stop">やめる</button>
+<div id="main">
 
+    <div id="left">
+   <div id="start-timer-row">
+    <button id="start" class="mainButton">> Start</button>
+<div class="timer" id="countdown">00:00:00</div>
+</div>
+   <div id="stop-correct-row">
+<button id="stop" class="mainButton">> Stop</button>
+<span class="correctSpan">正解数：<div id="correct">0</div></span>
+</div>
+<div id="questionArea"></div>
+</div>
+
+<div id="right"><br>
+<label class="selectMenu">
 <select id="timeSelect">
     <option value="30">30秒</option>
     <option value="60">60秒</option>
 </select>
-
+</label><br><br>
+<label class="selectMenu">
 <select id="styleSelect">
+    <option>まぜこぜモード</option>
     <option>二進数→十進数モード</option>
     <option>十進数→二進数モード</option>
-    <option>まぜこぜモード</option>
 </select>
-<div class="timer" id="countdown">00:00:00</div>
+</label>
+</div>
 
 
-<div id="correct">0</div>
-<div id="questionArea"></div>
 
+<div id="koukoku">
+</div>
+</div>
 
-<script src="mathStudyMazekoze JS.js"id="useScript"></script>
+<footer>
+    <p>実績や隠し要素は「実績」、遊び方は「遊び方」、その他の情報は「あばうと」を参照してください。<br>遊んでくれてありがとう！</p>
+</footer>
+
+<h1 class="heading-1">過去の記録</h1>
+<div id="dashBord">
+<div class="Koumoku">
+    <span>前回の記録</span><br>
+    <span>
+        <span id="zenkaiSeikaisu" class="Mondaisu"></span>
+        <span class="smallMoji">問正解</span>
+        <span class="Slash">/</span>
+        <span id="zenkaiMondaisu" class="Mondaisu"></span>
+        <span class="smallMoji">問中</span>
+    </span>
+</div>
+<div class="Koumoku">
+    <span>前々回の記録</span><br>
+    <span>
+        <span id="zenZenkaiSeikaisu" class="Mondaisu"></span>
+        <span class="smallMoji">問正解</span>
+        <span class="Slash">/</span>
+        <span id="zenZenkaiMondaisu" class="Mondaisu"></span>
+        <span class="smallMoji">問中</span>
+    </span>
+</div>
+<div class="Koumoku">
+    <span>累計正解数</span><br>
+    <span>
+        <span id="ruikeiSeikaisu" class="Mondaisu"></span>
+        <span class="smallMoji">問</span>
+    </span>
+</div>
+<div class="Koumoku">
+    <span>累計出題数</span><br>
+    <span>
+        <span id="ruikeiMondaisu" class="Mondaisu"></span>
+        <span class="smallMoji">問</span>
+    </span>
+</div>
+</div>
+
+<div class="modal-2__wrap">
+    <input type="radio" id="modal-2__open" class="modal-2__open-input" name="modal-2__trigger"/>
+    <label for="modal-2__open" class="modal-2__open-label">データをすべて削除</label>
+    <input type="radio" id="modal-2__close" name="modal-2__trigger"/>
+    <div class="modal-2">
+        <div class="modal-2__content-wrap">
+            <label for="modal-2__close" class="modal-2__close-label">×</label>
+            <div class="modal-2__content">
+                <div class="modal-2__content__sentence">本当に削除しますか？</div>
+                <button class="button-51">はい</button>
+            </div>
+        </div>
+        <label for="modal-2__close">
+            <div class="modal-2__background"></div>
+        </label>
+    </div>
+</div>
+
+<script src="MathStudyModel_JS.js"></script>
+
 <script>
-document.addEventListener("DOMContentLoaded", () =>{
-    const mode = document.getElementById('styleSelect');
-    select.addEventListener('change', (e) => {
-    let modesentaku = mode.value
-    if(modesentaku === 'まぜこぜモード'){
-        mode.setAttribute('src', 'mathStudyMazekoze JS.js')
-    }else{
-        if(modesentaku === '二進数→十進数モード'){
-            mode.setAttribute('src', 'mathStudyTwo JS.js');
-        }else{
-            mode.setAttribute('src', 'mathStudyTen JS.js');
-        }
-    }
-    });
-});
+//ローディング関連
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('loading-weapper')
+
+        //フェードアウトクラス付与
+        loader.classList.add('fade-out');
+        //アニメーションが終わったらディスプレイのーん
+        loader.addEventListener('animationend', () => {
+            loader.style.display = 'none';
+        })
+    })
+
+//広告画像関連
+window.addEventListener('load', ()=> {
+    const ADkoukoku = document.getElementById('koukoku');
+
+    let ransu = Math.floor( Math.random() * 3) + 1;
+
+    if(ransu === 1){
+        ADkoukoku.innerHTML=`<img src="広告画像/広告用.gif" style="width: 160px; height: 600px;">`
+    }else{if(ransu === 2){
+        ADkoukoku.innerHTML=`<img src="広告画像/広告用2.png" style="width: 160px; height: 600px;">`
+    }else{if(ransu === 3){
+        ADkoukoku.innerHTML=`<img src="広告画像/広告用3.png" style="width: 160px; height: 600px;">`
+    }}}
+})
 </script>
 </body>
 </html>
