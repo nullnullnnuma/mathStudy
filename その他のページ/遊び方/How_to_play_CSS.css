@@ -1,0 +1,132 @@
+/* ------------------------------ */
+/* sample01 */
+/* ------------------------------ */
+.header01 {
+  padding: 16px 24px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*
+  ↓ 固定にしたい場合は下記を入れる
+      position: sticky;
+      top: 0;
+      left: 0;
+  */
+}
+
+.header01-logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.header01-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 16px;
+  font-weight: bold;
+  list-style: none;
+  padding-left: 0;
+}
+
+.header01-item--contact {
+  background-color: #2486d1;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+  background-color: #F5F5F5;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#left-column{
+    width: 800px;
+    height: 600px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#right-column{
+    width: 300px;
+    height: 600px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#koukoku{
+    width: 160px;
+    height: 600px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#main-content{
+    display: flex;
+    width: 1350px;
+}
+/*横幅1400pxとする
+　左カラムは横800px
+　右カラムは横250px
+　広告は横140px*/
+
+
+/*見出し*/
+.heading-1 {
+    padding: .5em .7em;
+    border-left: 5px solid #fb5285;
+    color: #364f6b;
+}
+
+.list-2 {
+    counter-reset: li;
+}
+
+.list-2 li {
+    display: flex;
+    align-items: center;
+    padding: .3em;
+}
+
+.list-2 li::before {
+    display: inline-block;
+    min-width: 1.7em;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: #fc5285;
+    color: #fff;
+    font-weight: bold;
+    font-size: .75em;
+    line-height: 1.7em;
+    text-align: center;
+    content: counter(li);
+    counter-increment: li;
+}
+
+.kihon{
+    width: 600px;
+    border-radius: 10px;
+    border: 3px solid  #fb5285;
+    margin-left: 30px;
+}
+
+.bikou{
+    width: 600px;
+    height: 250px;
+    border-radius: 10px;
+    border: 3px solid  #fb5285;
+    margin: 0 auto;
+}
+
+.sankouGazou{
+    display: flex;
+}
