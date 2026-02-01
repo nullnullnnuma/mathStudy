@@ -19,6 +19,30 @@
                 </ul>
             </nav>
         </header>
+<div id="loading-weapper">
+<div class="loading-15">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="loading-5">
+    <p>
+        <span>L</span>
+        <span>o</span>
+        <span>a</span>
+        <span>d</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+    </p>
+</div>
+</div>
 
 <div id="main-content">
 <div id="left-column">
@@ -51,21 +75,6 @@
             loader.style.display = 'none';
         })
     })
-
-//広告画像関連
-window.addEventListener('load', ()=> {
-    const ADkoukoku = document.getElementById('koukoku');
-
-    let ransu = Math.floor( Math.random() * 3) + 1;
-
-    if(ransu === 1){
-        ADkoukoku.innerHTML=`<img src="../../広告画像/広告用.gif" style="width: 160px; height: 600px;">`
-    }else{if(ransu === 2){
-        ADkoukoku.innerHTML=`<img src="../../広告画像/広告用2.png" style="width: 160px; height: 600px;">`
-    }else{if(ransu === 3){
-        ADkoukoku.innerHTML=`<img src="../../広告画像/広告用3.png" style="width: 160px; height: 600px;">`
-    }}}
-})
 </script>
 </body>
 </html>
